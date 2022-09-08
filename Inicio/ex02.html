@@ -1,20 +1,19 @@
 <script>
 
-valor = prompt("valor em reais:");
+let valor = prompt("valor em reais:");
 
-Integer.parseInt(notas_100) = valor/100;
-Integer.parseInt(notas_50) = (valor - notas_100*100)/50;
-Integer.parseInt(notas_10) = (valor - (notas_100*100 + notas_50*50))/10;
-Integer.parseInt(notas_5) = (valor - (notas_100*100 + notas_50*50 + notas_10*10))/5;
-Integer.parseInt(notas_1) = (valor - (notas_100*100 + notas_50*50 + notas_10*10 + notas_5*5))/1;
+let notas_100 = (valor/100);
+let notas_50 =  (valor - notas_100*100)/50;
+let notas_10 =  (valor - (notas_100*100 + notas_50*50))/10;
+let notas_5 =  (valor - (notas_100*100 + notas_50*50 + notas_10*10))/5;
+let notas_1 =  (valor - (notas_100*100 + notas_50*50 + notas_10*10 + notas_5*5))/1;
 
 
-
-alert("Notas de 100: " + notas_100 + 
-    "\n Notas de 50: " + notas_50 +
-    "\n Notas de 10: " + notas_10 +
-    "\n Notas de 5: " + notas_5 +
-    "\n Notas de 1: " + notas_1);
+alert("Notas de 100: " + parseInt(notas_100) + 
+    "\n Notas de 50: " + parseInt(notas_50) +
+    "\n Notas de 10: " + parseInt(notas_10) +
+    "\n Notas de 5: " + parseInt(notas_5) +
+    "\n Notas de 1: " + parseInt(notas_1));
 
 
 
