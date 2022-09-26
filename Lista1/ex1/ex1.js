@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", main())
+function main () {
 while(confirm("Vamos calcular as massas de queijo, presunto e hamburguer necess√°rias!") == true)
 {
     let quantidadeSanduiche = parseInt(prompt("Digite a quantidade de sanduiches:  "));
@@ -22,4 +24,5 @@ while(confirm("Vamos calcular as massas de queijo, presunto e hamburguer necess√
     alert("kg de queijo:  " + Sanduiche.getkgQueijo().toFixed(2) +
         "\nkg de presunto:  " + Sanduiche.getkgPresunto().toFixed(2) +
         "\nkg de hamburguer:  " + Sanduiche.getkgHamburguer().toFixed(2));  
+}
 }
