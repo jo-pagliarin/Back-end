@@ -4,12 +4,12 @@ let filaAtendidos = [];
 
 class Cliente
     {
-        constructor(nome, cpf)
+        constructor(nome, cpf, prioridade)
         {
             this.nome = nome;
             this.cpf = cpf;
-            this.prioridade = Boolean; 
-        }    
+            this.prioridade = prioridade; 
+        }     
     }
 
 let resposta = 0; 
@@ -51,15 +51,15 @@ function atendeCliente()
     if(resposta == 1)
     {
         alert("Cliente " + filaPrioritaria[0].nome + " atendido");
-        filaAtendidos.push(filaPrioritaria[0].nome); 
+        filaAtendidos.push(filaPrioritaria[0]);
         filaPrioritaria.shift(); // shift remove o primeiro elemento
         alert("Tamanho atual da fila prioritária:  " + filaPrioritaria.length);
     }
 
     else
     {
-        filaAtendidos.push(filaNormal[0].nome);
         alert("Cliente " + filaNormal[0].nome + " atendido\n");
+        filaAtendidos.push(filaNormal[0]);
         filaNormal.shift();
         alert("Tamanho atual da fila normal:  " + filaNormal.length);    
     }
@@ -72,7 +72,7 @@ function mostraRelatorio()
     alert("Relatório de atendimentos: \n");
     for(let i = 0; i < filaAtendidos.length; i++)
     {
-        if(filaAtendidos[i].Boolean == true)
+        if(filaAtendidos[i].prioridade == true)
         {
             alert((i+1) + "º atendimento: " + filaAtendidos[i].nome + "\nTipo prioritário"); 
         }
