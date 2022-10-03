@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", main())
 function main () {
+    setTimeout(1000)
 while(confirm("Vamos calcular as massas de queijo, presunto e hamburguer necessárias!") == true)
 {
     let quantidadeSanduiche = parseInt(prompt("Digite a quantidade de sanduiches:  "));
