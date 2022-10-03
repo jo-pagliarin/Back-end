@@ -1,0 +1,44 @@
+<script>
+
+    const pessoas = [];
+
+    function IMC(pessoa) {
+        let imc = pessoa.peso / (pessoa.altura * pessoa.altura);
+
+        return imc.toFixed(2);
+    }
+
+    function verificaCondicao(pessoa) {
+        let classificacao;
+        if (pessoa.imc < 18.5) {
+            classificacao = "Voce esta abaixo do peso";
+        } else if (pessoa.imc >= 18.5 && pessoa.imc < 25) {
+            classificacao = "Voce esta com o peso normal";
+        } else if (pessoa.imc >= 25 && pessoa.imc < 30) {
+            classificacao = "Voce esta com sobrepeso";
+        } else if (pessoa.imc >= 30 && pessoa.imc < 35) {
+            classificacao = "Voce esta um pouco obesa";
+        } else if (pessoa.imc >= 35 && pessoa.imc < 40) {
+            classificacao = "Voce esta obesa";
+        } else if (pessoa.imc > 40) {
+            classificacao = "Voce esta muito obesa";
+        }
+
+        return classificacao;
+    }
+
+    function lePessoa() {
+        let pessoa = {};
+        pessoa.nome = prompt("NOME: ");
+        pessoa.peso = prompt(pessoa.nome + " PESO: ");
+        pessoa.altura = prompt(pessoa.nome + "ALTURA:");
+        pessoa.imc = IMC(pessoa);
+        pessoa.saude = verificaCondicao(pessoa);
+        alert(pessoa.saude);
+        pessoas.push(pessoa);
+        console.table(pessoas);
+    }
+
+    lePessoa(); 
+
+</script>
