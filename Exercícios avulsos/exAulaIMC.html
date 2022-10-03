@@ -1,0 +1,64 @@
+<script>
+
+
+    let entrevistados = [];
+    let abaixoIMC = [];
+    let normalIMC = [];
+    let acimaIMC = [];
+
+    class Pessoa {
+        constructor(nome, massa, altura, imc) {
+            this.nome = nome;
+            this.massa = massa;
+            this.altura = altura;
+            this.imc = imc;
+        }
+    }
+
+    CalculaIMC();
+    verificaIMC();
+    mostraRelatorio();
+
+    function CalculaIMC() {
+        let i = 0;
+        while (i < 3) {
+            nome = prompt("Digite seu nome: ");
+            massa = prompt("Digite seu peso:  ");
+            altura = prompt("Digite sua altura:  ");
+            imc = massa / (altura * altura);
+            imc = imc.toFixed(2);
+            entrevistados.push(new Pessoa(nome, massa, altura, imc));
+            i++;
+        }
+    }
+
+    function verificaIMC() {
+        let i = 0;
+        while (i < 3) {
+            if (parseFloat(entrevistados[i].imc) <= 18.5) {
+                abaixoIMC.push(entrevistados[i]);
+            }
+
+            else if (parseFloat(entrevistados[i].imc) >= 18.6 && parseFloat(entrevistados[i].imc) <= 24.9) {
+                normalIMC.push(entrevistados[i]);
+            }
+
+            else {
+                acimaIMC.push(entrevistados[i]);
+            }
+            i++;
+        }
+    }
+
+    function mostraRelatorio() {
+        console.log("Pessoas abaixo do peso: \n");
+        console.table(abaixoIMC);
+
+        console.log("Pessoas com peso normal: \n");
+        console.table(normalIMC);
+
+        console.log("Pessoas acima do peso: \n");
+        console.table(acimaIMC);
+    }
+
+</script>
