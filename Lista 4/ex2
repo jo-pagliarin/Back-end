@@ -1,0 +1,5 @@
+A função forEach pega cada elemento "nome" do vetor de objetos e faz um console.log dele.
+
+A função map pega cada elemento "nome" do vetor de objetos e imprime um outro vetor com esses nomes. 
+
+A função filter filtra apenas os elementos "idade" que sejam maior que 70. No entanto, traz o objeto inteiro, ao invés de apenas a idade. 
