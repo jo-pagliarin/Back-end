@@ -1,5 +1,7 @@
 // Exercício 9 - Crie uma função que escreva na tela APENAS os dados filtrados dos idosos maiores que 60 anos!
 
+const mudaTexto = document.getElementById("mudaTexto")
+
 const idosos = [
     { id: 0, nome: "genoveva", idade: "65", vivo: true },
     { id: 1, nome: "creitons", idade: "58", vivo: true },
@@ -17,8 +19,22 @@ const idosos = [
     { id: 13, nome: "virosvaldo", idade: "12", vivo: false },
     { id: 14, nome: "masteromio", idade: "85", vivo: false  }
 ]
+idososVelhos = idosos.filter(function(item){
+    return item.idade>60
+});
 
-idosos.filter(function(item){
-    if(item.idade > 60)
-    console.log(item); 
+
+idososVelhos.forEach(function(item){
+    if (item.vivo == true)
+    var estado = "vivo"; 
+
+    else if(item.vivo == false)
+    var estado = "morto";
+
+    else
+    var estado = "vivo ou morto, não sabemos"; 
+
+    let novoElemento = document.createElement('div')
+    novoElemento.innerText = "O nome do idoso é " + item.nome +  ", ele tem " + item.idade + " anos e está " + estado
+    mudaTexto.appendChild(novoElemento)
 });

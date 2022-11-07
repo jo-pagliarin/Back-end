@@ -2,7 +2,6 @@
 // 		Associe este elemento à uma variável no arquivo Javascript
 // 		Defina o texto interno (innerText) para ser o nome do idoso que ocupa a posição 6 do vetor.   
 
-
 const idosos = [
     { id: 0, nome: "genoveva", idade: "65", vivo: true },
     { id: 1, nome: "creitons", idade: "58", vivo: true },

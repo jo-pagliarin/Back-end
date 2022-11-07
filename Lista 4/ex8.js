@@ -19,6 +19,8 @@ const idosos = [
     { id: 14, nome: "masteromio", idade: "85", vivo: false  }
 ]
 
+const mudaTexto = document.getElementById("mudaTexto")
+
 idosos.forEach(function(item){
 
     if (item.vivo == true)
@@ -30,5 +32,8 @@ idosos.forEach(function(item){
     else
     var estado = "vivo ou morto, não sabemos"; 
 
-    console.log(`O nome do idoso é ${item.nome}, ele tem ${item.idade} anos e está ${estado}`);
+    let novoElemento = document.createElement('div')
+    novoElemento.innerText = "O nome do idoso é " + item.nome +  ", ele tem " + item.idade + " anos e está " + estado
+    mudaTexto.appendChild(novoElemento)
 }); 
+

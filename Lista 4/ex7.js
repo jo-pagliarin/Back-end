@@ -2,7 +2,6 @@
 // 	Usando a interpolação de strings (`ao invés de aspas, use crase`) componha uma string bem bacana para colocar como texto interno do elemento do exercício anterior. A string que você irá compor irá usar os valores de alguns idosos. Faça algo seguindo o exemplo abaixo e usando a sintaxe adequada.
 
 
-
 const idosos = [
     { id: 0, nome: "genoveva", idade: "65", vivo: true },
     { id: 1, nome: "creitons", idade: "58", vivo: true },
