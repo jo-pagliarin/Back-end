@@ -1,0 +1,16 @@
+{
+  "name": "meninas_super_poderosas",
+  "version": "1.0.0",
+  "description": "o professor mandou colocar esse nome",
+  "main": "contas.js",
+  "scripts": {
+    "test": "node script"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "colorss": "^0.0.1-security",
+    "starwars": "^1.0.1"
+  }
+}
